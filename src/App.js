@@ -1,12 +1,12 @@
-import React, { Component } from 'react';
-import {BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import React, { Component } from "react";
+import { HashRouter as Router, Route, Switch } from "react-router-dom";
 
-import {Provider} from 'react-redux';
-import store from './store'
+import { Provider } from "react-redux";
+import store from "./store";
 
-import AppNavbar from './components/layout/AppNavbar';
-import Dashboard from './components/layout/Dashboard';
-import './App.css';
+import AppNavbar from "./components/layout/AppNavbar";
+import Dashboard from "./components/layout/Dashboard";
+import "./App.css";
 
 class App extends Component {
   render() {
@@ -14,7 +14,7 @@ class App extends Component {
       <Provider store={store}>
         <Router>
           <div className="App">
-          <AppNavbar />
+            <AppNavbar />
             <div className="container">
               <Switch>
                 <Route exact path="/" component={Dashboard} />
